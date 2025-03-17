@@ -150,18 +150,34 @@ a{
     color: black;
 }
 
+.about i:hover{
+    color: var(--dourado);
+}
+
 .tecnologias{
     text-align: center;
     font-size: 3rem;
 }
 
+.tecnologias a{
+    color: var(--preto);
+}
+
+#flask:hover{
+    color:#49b0c3;
+}
+
+#python:hover{
+    color: #3776ab;
+}
+
+#github:hover{
+    color: black;
+}
+
 .projects{
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.75);
-}
-
-.projects h1{
-    color: white;
 }
 
 .projects-content{
@@ -180,6 +196,17 @@ a{
 .p1:hover, .p2:hover, .p3:hover{
     transform: scale(0.99);
     box-shadow: inset 0 0 0.5em var(--cafe), 0 0 0.5em var(--cafe);
+}
+
+.copiar{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--bege);
+}
+
+.copiar:hover{
+    color: var(--dourado);
 }
 
 .links{

@@ -29,13 +29,12 @@
             E a estilização escolhi pelo fato de eu amar café e achar cafeterias lugares confortáveis.
         </p>
         <div class="tecnologias">
-            <i class='bx bxl-flask'></i>
-            <i class='bx bxl-python'></i>
-            <i class='bx bxl-github'></i>
+            <a target="_blank" href="https://flask.palletsprojects.com/en/stable/"><i id="flask" class='bx bxl-flask'></i></a>
+            <a target="_blank" href="https://www.python.org/"><i id="python" class='bx bxl-python'></i></a>
+            <a target="_blank" href="https://github.com/"><i id="github" class='bx bxl-github'></i></a>
         </div>
     </div>
     <div class="projects">
-        <h1>Projetos</h1>
         <div class="projects-content">
             <div class="p1">
                 <h2>Projeto 1</h2>
@@ -54,17 +53,55 @@
     <footer>
         <div class="contato">
             <h3>Contatos</h3>
-            <p>alexander.ueno@hotmail.com</p>
-            <p>+55 (43) 9 9648-1137</p>
+            <p id="email">
+                alexander.ueno@hotmail.com
+                <button class="copiar" onclick="copyToClipboard()"><i class='bx bx-copy'></i></button>
+            </p>
+            <p id="tel">
+                +55 (43) 9 9648-1137
+                <button class="copiar" onclick="copyToClipboard2()"><i class='bx bx-copy'></i></button>
+            </p>
         </div>
         <div class="redes">
             <h3>Redes Sociais</h3>
             <div class="links">
-                <a href=""><i class='bx bxl-instagram'></i></a>
-                <a href=""><i class='bx bxl-linkedin-square'></i></a>
-                <a href=""><i class='bx bxl-github'></i></a>
+                <a target="_blank" href="https://www.instagram.com/alexander_ueno/"><i class='bx bxl-instagram'></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/alexander-ueno/"><i class='bx bxl-linkedin-square'></i></a>
+                <a target="_blank" href="https://github.com/AluedoSan"><i class='bx bxl-github'></i></a>
             </div>
         </div>
     </footer>
+    <script>
+        // Função para copiar o texto do email
+        function copyToClipboard() {
+            // Seleciona o texto que será copiado
+            const textToCopy = document.getElementById('email').innerText;
+
+            // Usa a Clipboard API para copiar o texto
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    alert('Texto copiado com sucesso!');
+                })
+                .catch((err) => {
+                    console.error('Erro ao copiar o texto: ', err);
+                    alert('Erro ao copiar o texto.');
+                });
+        }
+        // Função para copiar o texto do telefone
+        function copyToClipboard2() {
+            // Seleciona o texto que será copiado
+            const textToCopy = document.getElementById('tel').innerText;
+
+            // Usa a Clipboard API para copiar o texto
+            navigator.clipboard.writeText(textToCopy)
+               .then(() => {
+                    alert('Texto copiado com sucesso!');
+                })
+              .catch((err) => {
+                    console.error('Erro ao copiar o texto: ', err);
+                    alert('Erro ao copiar o texto.');
+                });
+        }
+    </script>
 </body>
 </html>
