@@ -4,10 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Repositorio</title>
 </head>
 <body>
-    <h1>Hello world</h1>
-    <p>{{ person }}</p>
+    <div class="sobre">
+        <div class="sobre-content">
+            <h1 style="font-size: 3rem; color:white;">Bem-vindo!</h1>
+            <p>Tudo certo? Sou o <u>Alexander Ueno</u>, moro em Londrina, e este é meu repositório, estou o fazendo para colocar alguns projetos pessoais meus que quero acessar de outros locais!</p>
+            <p>Tenho {{ idade }} anos, formado em bacharel em ciência da computação na faculdade UniFil aqui de Londrina!</p>
+            <p>E para finalizar estou atualmente cursando pós em cloud e cyber segurança e trabalhando como desenvolvedor full-stack na UniFil.</p>
+            <h3>Obrigado por lerem até aqui, agora fiquem a vontade para ver meus projetos</h3>
+        </div>
+        <div class="shake-vertical">
+            <a href="#section-2"> <i class='bx bx-chevrons-down'></i></a>
+        </div>
+    </div>
+    <div class="about" id="section-2">
+        <h1 style="display: flex; align-items: center;">Sobre o projeto<i style="margin-left: 1rem;" class='bx bxs-coffee-alt'></i></h1>
+        <p>
+            O projeto é um repositório de projetos pessoais que eu tenho feito, ele é feito com Flask e Python, e está hospedado na Vercel e versionado no github.
+        </p>
+        <p>
+            E a estilização escolhi pelo fato de eu amar café e achar cafeterias lugares confortáveis.
+        </p>
+        <div class="tecnologias">
+            <i class='bx bxl-flask'></i>
+            <i class='bx bxl-python'></i>
+            <i class='bx bxl-github'></i>
+        </div>
+    </div>
+    <div class="projects">
+        <h1>Projetos</h1>
+        <div class="projects-content">
+            <div class="p1">
+                <h2>Projeto 1</h2>
+                <a href="card">card</a>
+            </div>
+            <div class="p2">
+                <h2>Projeto 2</h2>
+                <a href="#">card</a>
+            </div>
+            <div class="p3">
+                <h2>Projeto 3</h2>
+                <a href="#">card</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="contato">
+            <h3>Contatos</h3>
+            <p>alexander.ueno@hotmail.com</p>
+            <p>+55 (43) 9 9648-1137</p>
+        </div>
+        <div class="redes">
+            <h3>Redes Sociais</h3>
+            <div class="links">
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-linkedin-square'></i></a>
+                <a href=""><i class='bx bxl-github'></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,21 +1,17 @@
 from flask import Flask, render_template, request, url_for, redirect
+import datetime
 
 app = Flask(__name__)
 
 @app.route("/")
-@app.route("/<name>")
 def index(name=None):
-    return render_template('index.html', person=name)
+    idade = datetime.datetime.now().year - 2003
+    return render_template('index.html', idade=idade)
 
 
-@app.route("/login", methods=['POST', 'GET'])
-def login():
-    if request.method == 'POST':
-        user = request.form['username']
-        return redirect(url_for('index', name=user))
-    else:
-        user = request.args.get('username')
-        return redirect(url_for('index', name=user))
+@app.route("/card")
+def card():
+    return render_template('card.html')
 
 
 if __name__ == '__main__':
